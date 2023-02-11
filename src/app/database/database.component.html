@@ -1,0 +1,33 @@
+<!-- <p>database works!</p> -->
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-10 col-md-8">
+            <form #dataPost="ngForm"  (ngSubmit)="onSubmit(dataPost.value)" >
+                <div class="form-group">
+                    <label for="project">Project</label>
+                    <input type="text" class="form-control" id="project" name="project" ngModel required >
+                </div><br>
+                <div class="form-group">
+                    <label for="material">Material</label>
+                    <textarea class="form-control" id="material" name="material" ngModel required></textarea>
+                </div>
+                <button type="submit" class="btn btn-success" [disabled]="!dataPost.valid"> Add Post</button>
+
+            
+
+            </form>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-xs-12 col-sm-10 col-md-8">
+            <button type="button" class="btn btn-warning" (click)="collectPost()" id="collect">collectPost</button>
+            
+            <button type="button" class="btn btn-danger" (click)="clearPost()" id="clear">ClearPost</button>
+
+        </div>
+        
+
+        
+    </div>
+</div>
